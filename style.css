@@ -1,0 +1,34 @@
+body{
+	padding: 0px;
+	margin: 0px;
+}
+
+#nav{
+	float:left;
+	background-color: #c0c0ff;
+	width: 15vw;
+	height: 100vh;
+
+}
+
+.nametag{
+	float: left;
+	width: 13vw;
+	height: 8vh;
+	padding-top: 5vh;
+	margin: 2vmin;
+	text-align: center;
+	background-color: #ffff99;
+	border-radius: 50px;
+}
+
+.navbutton{
+	float: left;
+	width: 13vw;
+	height: 8vh;
+	padding-top: 5vh;
+	margin: 2vmin;
+	border-radius: 50px;
+	background-color: #99ff99;
+	text-align: center;
+}
