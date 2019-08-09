@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'website';
   linkNames = ["welcome", "about", "experience", "projects", "contact"];
+  state = "test";
+
+  onUpdateState(state: string) {
+      this.state = state;
+  }
 }
