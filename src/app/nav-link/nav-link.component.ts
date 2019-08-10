@@ -1,7 +1,7 @@
-import { Component, Input, Output, EventEmitter } from   '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-    selector: 'nav-link',
+    selector: 'app-nav-link',
     templateUrl: './nav-link.component.html'
 })
 export class NavLinkComponent {
