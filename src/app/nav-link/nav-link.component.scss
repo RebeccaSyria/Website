@@ -1,0 +1,16 @@
+button {
+    display: inline;
+    background-color: grey;
+    width: 15vw;
+    height: 7vh;
+    font-size: 20px;
+    border: none;
+    color: white;
+    &:hover {
+        background-color: green;
+    }
+}
+
+.active {
+    background-color: blue;
+}

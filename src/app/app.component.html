@@ -1,8 +1,10 @@
-<div style="text-align:center">
+<div>
     <ul class="navigation">
         <li *ngFor="let linkText of linkNames">
-            <app-nav-link (state)='onUpdateState($event)' linkText={{linkText}}></nav-link>
+            <app-nav-link (state)='onUpdateState($event)' linkText={{linkText}} currentState={{state}}></app-nav-link>
         </li>
      </ul>
-
-     <div>{{state}}</div>
+     <div class="card">
+         <app-card title="{{state}}" body="test"></app-card>
+     </div>
+</div>

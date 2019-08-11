@@ -4,10 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { NavLinkComponent } from './nav-link/nav-link.component';
+import { CardComponent } from './card/card.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    NavLinkComponent
+    NavLinkComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule
