@@ -4,7 +4,10 @@
             <app-nav-link (state)='onUpdateState($event)' linkText={{linkText}} currentState={{state}}></app-nav-link>
         </li>
      </ul>
+     <div class="navigation-hamburger">
+         <i class="fa fa-bars" aria-hidden="true"></i>
+     </div>
      <div class="card">
-         <app-card title="{{state}}" body="test"></app-card>
+         <app-card title="{{state}}"></app-card>
      </div>
 </div>
