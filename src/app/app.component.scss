@@ -5,27 +5,33 @@
 
 .navigation li {
     display: inline;
+    padding-right: 10px;
 }
 
 .card {
+    position: relative;
     text-align: center;
+    z-index: 0;
 }
 
-@media (max-width: 750px){
+@media (max-width: 500px){
     .navigation {
         display: none;
     }
 }
 
 .navigation-hamburger {
-    text-align: center;
+    position: relative;
+    text-align: left;
     font-size: 50px;
+    height: 56px;
     background-color: grey;
     width: 100vw;
     margin-top: 16px;
+    z-index: 1;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 500px) {
     .navigation-hamburger {
         display: none;
     }

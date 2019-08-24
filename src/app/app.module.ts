@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 
 import { NavLinkComponent } from './nav-link/nav-link.component';
 import { CardComponent } from './card/card.component';
+import {HamburgerButtonComponent } from './hamburger-button/hamburger-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavLinkComponent,
-    CardComponent
+    CardComponent,
+    HamburgerButtonComponent
   ],
   imports: [
     BrowserModule

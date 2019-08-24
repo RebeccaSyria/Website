@@ -43,7 +43,7 @@ export class CardComponent implements OnChanges {
             case 'Projects': {
                 this.body[0] = 'Personal Website - Summer 2018-Ongoing - You\'re looking at it! Written in Angular.';
                 this.body[1] = 'Messenger Parse - December 2018-Ongoing - Javascript tool to parse and display data on Facebook \
-                Messenger conversations such as how many messages per day, words per day and other statistics';
+                Messenger conversations such as how many messages per participant, words per participant and other statistics';
                 this.body[2] = 'GameBoy Assembly Learning Project - Spring 2018 - Small game I created to learn the basics of assembly';
                 this.body[3] = 'Binary Clock - Spring 2018 - A command line binary clock written in C';
                 this.body[4] = 'Bounce - Spring 2017 - Small Javascript game coded in 48 hours for Ludum Dare 38';

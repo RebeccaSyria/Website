@@ -20,6 +20,5 @@ export class NavLinkComponent implements OnChanges {
     }
     updateState(s: string) {
         this.state.emit(s);
-        console.log(this.isActive);
     }
 }
