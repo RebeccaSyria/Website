@@ -21,4 +21,12 @@ export class NavLinkComponent implements OnChanges {
     updateState(s: string) {
         this.state.emit(s);
     }
+    getColor(s: string) {
+        switch(s){
+            case("Projects"):
+                return "#CEBEF0";
+            default:
+                return "#9CECF1";
+        }
+    }
 }

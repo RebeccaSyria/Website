@@ -1,4 +1,5 @@
 <div>
+    <welcome-bar></welcome-bar>
     <ul class="navigation">
         <li *ngFor="let linkText of linkNames">
             <app-nav-link (state)='onUpdateState($event)' linkText={{linkText}} currentState={{state}}></app-nav-link>

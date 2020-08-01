@@ -1,1 +1,1 @@
-<button (click)="updateState(linkText)" [ngClass]="{active: isActive}" >{{linkText}}</button>
+<button (click)="updateState(linkText)" [ngClass]="{active: isActive}" [ngStyle]="{'background-color':getColor(linkText)}">{{linkText}}</button>
