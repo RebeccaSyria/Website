@@ -13,4 +13,8 @@ export class AppComponent {
   onUpdateState(state: string) {
       this.state = state;
   }
+
+  scrollToTop() {
+    window.scrollTo({top: 0, behavior: "smooth"});
+  }
 }

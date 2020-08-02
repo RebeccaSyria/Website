@@ -1,9 +1,0 @@
-<div class="hamburger-button">
-    <button class="fa fa-bars" aria-label="Navigation button" (click)="onClick()"></button>
-</div>
-
-<ul *ngIf=clicked class="links">
-   <li *ngFor="let linkText of linkNames">
-       <button (click)="updateState(linkText)"> {{linkText}} </button>
-   </li>
-</ul>

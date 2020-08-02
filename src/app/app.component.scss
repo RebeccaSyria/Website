@@ -16,24 +16,17 @@ ul {
     z-index: 0;
 }
 
-@media (max-width: 500px){
-    .navigation {
-        display: none;
-    }
+.scroll-button {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: 48px;
+    width: 48px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 2px 4px 0px black;
+    background-color: lightgray;
 }
 
-.navigation-hamburger {
-    position: relative;
-    text-align: left;
-    font-size: 50px;
-    height: 56px;
-    background-color: grey;
-    width: 100vw;
-    z-index: 1;
-}
-
-@media (min-width: 500px) {
-    .navigation-hamburger {
-        display: none;
-    }
-}
