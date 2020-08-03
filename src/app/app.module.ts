@@ -5,14 +5,14 @@ import { AppComponent } from './app.component';
 
 import { NavLinkComponent } from './nav-link/nav-link.component';
 import { CardComponent } from './card/card.component';
-import {HamburgerButtonComponent } from './hamburger-button/hamburger-button.component';
+import { welcomeBarComponent } from './welcome-bar/welcome-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavLinkComponent,
     CardComponent,
-    HamburgerButtonComponent
+    welcomeBarComponent
   ],
   imports: [
     BrowserModule

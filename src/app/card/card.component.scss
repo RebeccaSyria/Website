@@ -1,12 +1,23 @@
 .card {
-    width: 60vw;
-    background-color: grey;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+}
+.text-area {
     text-align: left;
-    padding: 30px;
-    padding-top: 10px;
     display: inline-block;
     font-family: inherit;
-    border-radius: 20px;
-    margin-top: 50px;
     font-size: 20px;
+    text-align: left;
+    padding-left: 48px;
+    padding-right: 48px;
+    margin-bottom: 0px;
+    max-width: 800px;
+}
+.text-area p {
+    text-align: left;
+}
+.text-area a {
+    text-align: left;
 }

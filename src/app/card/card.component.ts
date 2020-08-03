@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core';
+import { TITLES, JOBS, JOB_DESCRIPTIONS, PROJECTS, PROJECT_DESCRIPTIONS, PROJECT_LINKS } from '../app.constants';
 
 @Component({
     selector: 'app-card',
@@ -9,46 +10,70 @@ export class CardComponent implements OnChanges {
     @Input() title: string;
 
     body = [];
+    color = "";
 
+    getSize(i: number) {
+        if(this.title === TITLES.EXPERIENCE) {
+            return i % 2 ? '16px' : '20px';
+        } else {
+            return i % 3 ? '16px' : '20px';
+        }
+    }
+
+    showLink(i: number) {
+        if(this.title === TITLES.PROJECTS) {
+            if( i % 3 === 2) {
+                return true;
+            }
+        }
+        return false;
+    }
     ngOnChanges() {
         this.body = [];
         switch (this.title) {
-            case 'Welcome': {
-                this.body[0] = 'Hello and welcome! I\'m Rebecca Syria, a computer science student at RIT \
-                    with an expected graduation of December 2020. I have a strong interest in both front and back end \
-                    software engineering, as well as game development. Feel free to take a look a look around the Projects \
-                    and Experience sections to see what I\'ve done!';
-                this.body[1] = 'Please pardon any dust, this website is still under construction!';
+            case TITLES.EXPERIENCE: {
+                this.body[0] = JOBS.INTUIT_1;
+                this.body[1] = JOB_DESCRIPTIONS.INTUIT_1;
+                this.body[2] = JOBS.INTUIT_2;
+                this.body[3] = JOB_DESCRIPTIONS.INTUIT_2;
+                this.body[4] = JOBS.ID_TECH;
+                this.body[5] = JOB_DESCRIPTIONS.ID_TECH;
+                this.body[6] = JOBS.RIT;
+                this.body[7] = JOB_DESCRIPTIONS.RIT;
+                this.body[8] = JOBS.GOAT_FARM;
+                this.body[9] = JOB_DESCRIPTIONS.GOAT_FARM;
+                this.body[10] = JOBS.OSV;
+                this.body[11] = JOB_DESCRIPTIONS.OSV;
+                this.color = "#9CECF1"
                 break;
             }
-            case 'About': {
-                this.body[0] = 'test about';
-                break;
-            }
-            case 'Experience': {
-                this.body[0] = 'Part-Time Remote Co-Op - Intuit - Fall 2019';
-                this.body[2] = 'Software Engineering Co-Op - Intuit - Spring-Summer 2019';
-                this.body[4] = 'Summer Camp Instructor - IdTech - Summer 2018';
-                this.body[6] = 'Computer Science 1 Grader - RIT - Fall 2017';
-                this.body[8] = 'Farm Hand - Red Goat Farm - Fall 2015-Summer 2016, Summer 2017, May-June 2018';
-                this.body[10] = '4-H Intern - Old Sturbridge Village - Summer 2013, Summer 2014, Summer 2015';
-                break;
-            }
-            case 'Contact': {
-                this.body[0] = 'Github: https://github.com/RebeccaSyria';
-                this.body[1] = 'LinkedIn: https://www.linkedin.com/in/rebeccasyria/';
-                this.body[2] = 'Email: RebeccaESyria@gmail.com';
-                break;
-            }
-            case 'Projects': {
-                this.body[0] = 'Personal Website - Summer 2018-Ongoing - You\'re looking at it! Written in Angular.';
-                this.body[1] = 'Messenger Parse - December 2018-Ongoing - Javascript tool to parse and display data on Facebook \
-                Messenger conversations such as how many messages per participant, words per participant and other statistics';
-                this.body[2] = 'GameBoy Assembly Learning Project - Spring 2018 - Small game I created to learn the basics of assembly';
-                this.body[3] = 'Binary Clock - Spring 2018 - A command line binary clock written in C';
-                this.body[4] = 'Bounce - Spring 2017 - Small Javascript game coded in 48 hours for Ludum Dare 38';
-                this.body[5] = 'Image To Sound - December 2016 - Python tool to convert images to midi sound files using pixel values';
-                this.body[6] = 'KittenBox - Fall 2016 - Team game jam project coded in 24 hours using Processing.';
+            case TITLES.PROJECTS: {
+                this.body[0] = PROJECTS.HABIT_TRACKER;
+                this.body[1] = PROJECT_DESCRIPTIONS.HABIT_TRACKER;
+                this.body[2] = PROJECT_LINKS.HABIT_TRACKER;
+                this.body[3] = PROJECTS.WEBSITE;
+                this.body[4] = PROJECT_DESCRIPTIONS.WEBSITE
+                this.body[5] = PROJECT_LINKS.WEBSITE;
+                this.body[6] = PROJECTS.MESSENGER_PARSE;
+                this.body[7] = PROJECT_DESCRIPTIONS.MESSENGER_PARSE;
+                this.body[8] = PROJECT_LINKS.MESSENGER_PARSE;
+                this.body[9] = PROJECTS.GB_ASM;
+                this.body[10] = PROJECT_DESCRIPTIONS.GB_ASM;
+                this.body[11] = PROJECT_LINKS.GB_ASM;
+                this.body[12] = PROJECTS.BINARY_CLOCK;
+                this.body[13] = PROJECT_DESCRIPTIONS.BINARY_CLOCK;
+                this.body[14] = PROJECT_LINKS.BINARY_CLOCK;
+                this.body[15] = PROJECTS.BOUNCE;
+                this.body[16] = PROJECT_DESCRIPTIONS.BOUNCE;
+                this.body[17] = PROJECT_LINKS.BOUNCE;
+                this.body[18] = PROJECTS.IMAGE_TO_SOUND;
+                this.body[19] = PROJECT_DESCRIPTIONS.IMAGE_TO_SOUND;
+                this.body[20] = PROJECT_LINKS.IMAGE_TO_SOUND;
+                this.body[21] = PROJECTS.KITTEN_BOX;
+                this.body[22] = PROJECT_DESCRIPTIONS.KITTEN_BOX;
+                this.body[23] = PROJECT_LINKS.KITTEN_BOX;
+
+                this.color = "#CEBEF0";
                 break;
             }
         }

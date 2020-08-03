@@ -1,13 +1,12 @@
 <div>
+    <welcome-bar></welcome-bar>
     <ul class="navigation">
         <li *ngFor="let linkText of linkNames">
             <app-nav-link (state)='onUpdateState($event)' linkText={{linkText}} currentState={{state}}></app-nav-link>
         </li>
      </ul>
-     <div class="navigation-hamburger">
-         <app-hamburger-button (state)='onUpdateState($event)' linkNames=linkNames></app-hamburger-button>
-     </div>
      <div class="card">
          <app-card title="{{state}}"></app-card>
      </div>
+     <button class="scroll-button" (click)="scrollToTop()">^</button>
 </div>
