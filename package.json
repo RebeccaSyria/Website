@@ -22,7 +22,6 @@
     "@angular/platform-browser-dynamic": "~10.0.7",
     "@angular/router": "~10.0.7",
     "angular-cli-ghpages": "^0.6.0-rc.2",
-    "ngx-float-button": "^1.0.0",
     "rxjs": "~6.6.2",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.3"
