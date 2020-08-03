@@ -1,6 +1,6 @@
 <div class="card" [ngStyle]="{'background-color':color}">
     <div class="text-area">
-    <p *ngFor="let item of body">
+    <p *ngFor="let item of body; let i = index" [ngStyle]="{'font-size':getSize(i)}">
         {{item}}
     </p>
     </div>

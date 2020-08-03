@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TITLES, INTRO } from '../app.constants';
 
 @Component({
     selector: 'welcome-bar',
@@ -6,12 +7,6 @@ import { Component } from '@angular/core';
     styleUrls: ['./welcome-bar.component.scss']
 })
 export class welcomeBarComponent {
-    title = "Welcome";
-    body = [
-        "Hello!",
-        "My name is Rebecca Syria and I am computer science student \
-    at RIT. I have a strong interest in both front and back end software engineering, \
-    as well as game development.",
-    "Available for full-time hire starting Late December 2020!"
-    ];
+    title = TITLES.WELCOME;
+    body = INTRO;
 }

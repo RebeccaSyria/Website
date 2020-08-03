@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core';
+import { TITLES, JOBS, JOB_DESCRIPTIONS, PROJECTS, PROJECT_DESCRIPTIONS } from '../app.constants';
 
 @Component({
     selector: 'app-card',
@@ -10,80 +11,47 @@ export class CardComponent implements OnChanges {
 
     body = [];
     color = "";
+
+    getSize(i: number) {
+        return i % 2 ? '16px' : '20px';
+    }
+
     ngOnChanges() {
         this.body = [];
         switch (this.title) {
-            case 'Experience': {
-                this.body[0] = 'Software Engineering Co-Op - Intuit - January 2020 - Present';
-                this.body[1] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet malesuada ipsum. Sed viverra arcu dolor, vel egestas\
-                ligula luctus eget. Aliquam dolor neque, efficitur pharetra ornare at, consequat ac lectus. Maecenas vel nulla sed risus posuere\
-                vehicula. Aliquam blandit in ante ut porttitor. Nulla quam ante, suscipit non odio sed, laoreet suscipit quam. Duis vitae venenatis \
-               tellus. Quisque rutrum nibh sapien, at tristique orci ultricies ut. Quisque ut neque a purus faucibus condimentum at ac justo. '
-                this.body[2] = 'Software Engineering Co-Op - Intuit - January 2019-December 2019';
-                this.body[3] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet malesuada ipsum. Sed viverra arcu dolor, vel egestas\
-                ligula luctus eget. Aliquam dolor neque, efficitur pharetra ornare at, consequat ac lectus. Maecenas vel nulla sed risus posuere\
-                vehicula. Aliquam blandit in ante ut porttitor. Nulla quam ante, suscipit non odio sed, laoreet suscipit quam. Duis vitae venenatis \
-               tellus. Quisque rutrum nibh sapien, at tristique orci ultricies ut. Quisque ut neque a purus faucibus condimentum at ac justo. '
-                this.body[4] = 'Summer Camp Instructor - IdTech - Summer 2018';
-                this.body[5] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet malesuada ipsum. Sed viverra arcu dolor, vel egestas\
-                ligula luctus eget. Aliquam dolor neque, efficitur pharetra ornare at, consequat ac lectus. Maecenas vel nulla sed risus posuere\
-                vehicula. Aliquam blandit in ante ut porttitor. Nulla quam ante, suscipit non odio sed, laoreet suscipit quam. Duis vitae venenatis \
-               tellus. Quisque rutrum nibh sapien, at tristique orci ultricies ut. Quisque ut neque a purus faucibus condimentum at ac justo. '
-                this.body[6] = 'Computer Science 1 Grader - RIT - Fall 2017';
-                this.body[7] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet malesuada ipsum. Sed viverra arcu dolor, vel egestas\
-                ligula luctus eget. Aliquam dolor neque, efficitur pharetra ornare at, consequat ac lectus. Maecenas vel nulla sed risus posuere\
-                vehicula. Aliquam blandit in ante ut porttitor. Nulla quam ante, suscipit non odio sed, laoreet suscipit quam. Duis vitae venenatis \
-               tellus. Quisque rutrum nibh sapien, at tristique orci ultricies ut. Quisque ut neque a purus faucibus condimentum at ac justo. '
-                this.body[8] = 'Farm Hand - Red Goat Farm - Fall 2015-Summer 2016, Summer 2017, May-June 2018';
-                this.body[9] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet malesuada ipsum. Sed viverra arcu dolor, vel egestas\
-                ligula luctus eget. Aliquam dolor neque, efficitur pharetra ornare at, consequat ac lectus. Maecenas vel nulla sed risus posuere\
-                vehicula. Aliquam blandit in ante ut porttitor. Nulla quam ante, suscipit non odio sed, laoreet suscipit quam. Duis vitae venenatis \
-               tellus. Quisque rutrum nibh sapien, at tristique orci ultricies ut. Quisque ut neque a purus faucibus condimentum at ac justo. '
-                this.body[10] = '4-H Intern - Old Sturbridge Village - Summer 2013, Summer 2014, Summer 2015';
-                this.body[11] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet malesuada ipsum. Sed viverra arcu dolor, vel egestas\
-                ligula luctus eget. Aliquam dolor neque, efficitur pharetra ornare at, consequat ac lectus. Maecenas vel nulla sed risus posuere\
-                vehicula. Aliquam blandit in ante ut porttitor. Nulla quam ante, suscipit non odio sed, laoreet suscipit quam. Duis vitae venenatis \
-               tellus. Quisque rutrum nibh sapien, at tristique orci ultricies ut. Quisque ut neque a purus faucibus condimentum at ac justo. '
+            case TITLES.EXPERIENCE: {
+                this.body[0] = JOBS.INTUIT_1;
+                this.body[1] = JOB_DESCRIPTIONS.INTUIT_1;
+                this.body[2] = JOBS.INTUIT_2;
+                this.body[3] = JOB_DESCRIPTIONS.INTUIT_2;
+                this.body[4] = JOBS.ID_TECH;
+                this.body[5] = JOB_DESCRIPTIONS.ID_TECH;
+                this.body[6] = JOBS.RIT;
+                this.body[7] = JOB_DESCRIPTIONS.RIT;
+                this.body[8] = JOBS.GOAT_FARM;
+                this.body[9] = JOB_DESCRIPTIONS.GOAT_FARM;
+                this.body[10] = JOBS.OSV;
+                this.body[11] = JOB_DESCRIPTIONS.OSV;
                 this.color = "#9CECF1"
                 break;
             }
-            case 'Projects': {
-                this.body[0] = 'Personal Website - Summer 2018-Ongoing - You\'re looking at it! Written in Angular.';
-                this.body[1] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet malesuada ipsum. Sed viverra arcu dolor, vel egestas\
-                ligula luctus eget. Aliquam dolor neque, efficitur pharetra ornare at, consequat ac lectus. Maecenas vel nulla sed risus posuere\
-                vehicula. Aliquam blandit in ante ut porttitor. Nulla quam ante, suscipit non odio sed, laoreet suscipit quam. Duis vitae venenatis \
-               tellus. Quisque rutrum nibh sapien, at tristique orci ultricies ut. Quisque ut neque a purus faucibus condimentum at ac justo. '
-                this.body[2] = 'Messenger Parse - December 2018 - Javascript tool to parse and display data on Facebook \
-                Messenger conversations such as how many messages per participant, words per participant and other statistics';
-                this.body[3] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet malesuada ipsum. Sed viverra arcu dolor, vel egestas\
-                ligula luctus eget. Aliquam dolor neque, efficitur pharetra ornare at, consequat ac lectus. Maecenas vel nulla sed risus posuere\
-                vehicula. Aliquam blandit in ante ut porttitor. Nulla quam ante, suscipit non odio sed, laoreet suscipit quam. Duis vitae venenatis \
-               tellus. Quisque rutrum nibh sapien, at tristique orci ultricies ut. Quisque ut neque a purus faucibus condimentum at ac justo. '
-                this.body[4] = 'GameBoy Assembly Learning Project - Spring 2018 - Small game I created to learn the basics of assembly';
-                this.body[5] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet malesuada ipsum. Sed viverra arcu dolor, vel egestas\
-                ligula luctus eget. Aliquam dolor neque, efficitur pharetra ornare at, consequat ac lectus. Maecenas vel nulla sed risus posuere\
-                vehicula. Aliquam blandit in ante ut porttitor. Nulla quam ante, suscipit non odio sed, laoreet suscipit quam. Duis vitae venenatis \
-               tellus. Quisque rutrum nibh sapien, at tristique orci ultricies ut. Quisque ut neque a purus faucibus condimentum at ac justo. '
-                this.body[6] = 'Binary Clock - Spring 2018 - A command line binary clock written in C';
-                this.body[7] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet malesuada ipsum. Sed viverra arcu dolor, vel egestas\
-                ligula luctus eget. Aliquam dolor neque, efficitur pharetra ornare at, consequat ac lectus. Maecenas vel nulla sed risus posuere\
-                vehicula. Aliquam blandit in ante ut porttitor. Nulla quam ante, suscipit non odio sed, laoreet suscipit quam. Duis vitae venenatis \
-               tellus. Quisque rutrum nibh sapien, at tristique orci ultricies ut. Quisque ut neque a purus faucibus condimentum at ac justo. '
-                this.body[8] = 'Bounce - Spring 2017 - Small Javascript game coded in 48 hours for Ludum Dare 38';
-                this.body[9] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet malesuada ipsum. Sed viverra arcu dolor, vel egestas\
-                ligula luctus eget. Aliquam dolor neque, efficitur pharetra ornare at, consequat ac lectus. Maecenas vel nulla sed risus posuere\
-                vehicula. Aliquam blandit in ante ut porttitor. Nulla quam ante, suscipit non odio sed, laoreet suscipit quam. Duis vitae venenatis \
-               tellus. Quisque rutrum nibh sapien, at tristique orci ultricies ut. Quisque ut neque a purus faucibus condimentum at ac justo. '
-                this.body[10] = 'Image To Sound - December 2016 - Python tool to convert images to midi sound files using pixel values';
-                this.body[11] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet malesuada ipsum. Sed viverra arcu dolor, vel egestas\
-                ligula luctus eget. Aliquam dolor neque, efficitur pharetra ornare at, consequat ac lectus. Maecenas vel nulla sed risus posuere\
-                vehicula. Aliquam blandit in ante ut porttitor. Nulla quam ante, suscipit non odio sed, laoreet suscipit quam. Duis vitae venenatis \
-               tellus. Quisque rutrum nibh sapien, at tristique orci ultricies ut. Quisque ut neque a purus faucibus condimentum at ac justo. '
-                this.body[12] = 'KittenBox - Fall 2016 - Team game jam project coded in 24 hours using Processing.';
-                this.body[13] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet malesuada ipsum. Sed viverra arcu dolor, vel egestas\
-                ligula luctus eget. Aliquam dolor neque, efficitur pharetra ornare at, consequat ac lectus. Maecenas vel nulla sed risus posuere\
-                vehicula. Aliquam blandit in ante ut porttitor. Nulla quam ante, suscipit non odio sed, laoreet suscipit quam. Duis vitae venenatis \
-               tellus. Quisque rutrum nibh sapien, at tristique orci ultricies ut. Quisque ut neque a purus faucibus condimentum at ac justo. '
+            case TITLES.PROJECTS: {
+                this.body[0] = PROJECTS.HABIT_TRACKER;
+                this.body[1] = PROJECT_DESCRIPTIONS.HABIT_TRACKER;
+                this.body[2] = PROJECTS.WEBSITE;
+                this.body[3] = PROJECT_DESCRIPTIONS.WEBSITE
+                this.body[4] = PROJECTS.MESSENGER_PARSE;
+                this.body[5] = PROJECT_DESCRIPTIONS.MESSENGER_PARSE;
+                this.body[6] = PROJECTS.GB_ASM;
+                this.body[7] = PROJECT_DESCRIPTIONS.GB_ASM;
+                this.body[8] = PROJECTS.BINARY_CLOCK;
+                this.body[9] = PROJECT_DESCRIPTIONS.BINARY_CLOCK;
+                this.body[10] = PROJECTS.BOUNCE;
+                this.body[11] = PROJECT_DESCRIPTIONS.BOUNCE;
+                this.body[12] = PROJECTS.IMAGE_TO_SOUND;
+                this.body[13] = PROJECT_DESCRIPTIONS.IMAGE_TO_SOUND;
+                this.body[14] = PROJECTS.KITTEN_BOX;
+                this.body[15] = PROJECT_DESCRIPTIONS.KITTEN_BOX;
                 this.color = "#CEBEF0";
                 break;
             }
