@@ -1,7 +1,8 @@
 <div class="card" [ngStyle]="{'background-color':color}">
     <div class="text-area">
-    <p *ngFor="let item of body; let i = index" [ngStyle]="{'font-size':getSize(i)}">
-        {{item}}
-    </p>
+    <div *ngFor="let item of body; let i = index" [ngStyle]="{'font-size':getSize(i)}">
+        <p *ngIf="showLink(i) === false">{{item}}</p>
+        <a *ngIf="showLink(i)" href={{item}}>{{item}}</a>
+    </div>
     </div>
 </div>

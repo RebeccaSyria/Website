@@ -53,6 +53,16 @@ export const PROJECT_DESCRIPTIONS = {
     IMAGE_TO_SOUND: "Tool built in python to convert image files to midi sound files based on pixel color values. Built for a hackathon in 24 hours.",
     KITTEN_BOX: "Team game jam project written in less than 24 hours using Processing. Two player game in which players must work together to push boxes around and escape a level."
 }
+export const PROJECT_LINKS = {
+    HABIT_TRACKER: "https://github.com/RebeccaSyria/habittracker",
+    WEBSITE: "https://github.com/RebeccaSyria/Website",
+    MESSENGER_PARSE: "https://github.com/RebeccaSyria/messengerParse",
+    GB_ASM: "https://github.com/RebeccaSyria/gbc",
+    BINARY_CLOCK: "https://github.com/RebeccaSyria/binaryClock",
+    BOUNCE: "https://rebeccas.itch.io/bounce",
+    IMAGE_TO_SOUND: "https://github.com/RebeccaSyria/ImageToSound",
+    KITTEN_BOX: "https://github.com/EthanNichols/KittenBox-CSH2016"
+}
 
 export const INTRO = [
     "Hello!",
